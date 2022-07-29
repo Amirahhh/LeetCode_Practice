@@ -1,0 +1,19 @@
+def countGroups(related):
+    # Write your code here
+    count = 0
+    n = len(related)
+    for i in range (n):
+        print(related)
+        if related[i] != True:
+            count += 1
+            count_updated(related, related[i], n)
+    return count
+
+def count_updated(related, s, n):
+    for j in range (n):
+        if related[j] != True and s[j] == "1":
+            m = related[j]
+            related[j] = True
+            count_updated(related, m, n)
+            
+if __name__ == '__main__':
