@@ -25,7 +25,8 @@ class Solution:
           if i < len(s) - 1 and s[i]+s[i+1] in cNumbers:
             answer += cNumbers[s[i] + s[i + 1]]
             i += 2
-            continue
+            continue 
+
           
           answer += numbers[s[i]]
           i += 1
